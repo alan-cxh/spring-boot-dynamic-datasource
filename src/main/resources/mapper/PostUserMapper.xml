@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.apedad.example.dao.PostUserMapper">
+    <update id="update">
+UPDATE aaa_clu_op SET clu_obj_type = 'vol', clu_obj_id = 190000000001, op_name = null, op_code = 'deploy', op_status = 'success', op_ext_param = null, op_end_time = '2019-07-09 09:32:33.000000', job_id = '8D3606B8CEB88B45E0530F08010A8DB4', job_description = null, tenant_id = 100220, create_date = '2019-07-09 09:32:06.000000', change_date = '2019-07-09 09:32:33.000000', creator_id = 100100, del_flag = 0 WHERE clu_op_id = #{i};
+    </update>
+
+    <select id="getList" resultType="java.util.Map">
+        select * from aaa_clu_op
+    </select>
+
+    <insert id="insert" >
+INSERT INTO aaa_clu_op (CLU_OP_ID, CLU_OBJ_TYPE, CLU_OBJ_ID, OP_NAME, OP_CODE, OP_STATUS, OP_EXT_PARAM, OP_END_TIME, JOB_ID, JOB_DESCRIPTION, TENANT_ID, CREATE_DATE, CHANGE_DATE, CREATOR_ID, DEL_FLAG) VALUES (#{i}, 'vol1', 1900000001, null, 'd1eploy', 's1ucc111ess', null, TO_DATE('2019-07-09 09:32:33', 'YYYY-MM-DD HH24:MI:SS'), '8D3606B8CEB8wewe8B45E0530F08010A8DB4', null, 100220, TO_DATE('2019-07-09 09:32:06', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2020-07-09 09:32:33', 'YYYY-MM-DD HH24:MI:SS'), 100100, 0);
+    </insert>
+
+</mapper>
